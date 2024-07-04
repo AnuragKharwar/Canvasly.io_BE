@@ -14,11 +14,11 @@ async function bootstrap() {
     }),
   );
 
-  app.enableCors({
-    origin: ['http://localhost:3000'], // List of allowed origins
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // List of allowed methods
-    credentials: true, // Allow cookies to be sent
-  });
+ app.enableCors({
+   origin: '*', // Allow all origins
+   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // List of allowed methods
+   credentials: true, // Allow cookies to be sent
+ });
 
   await app.listen(3001);
 }
